@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>笔尖戳过的夏天</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- 开始封面 -->
+  <div id="start-screen">
+    <div class="start-content">
+      <h1>笔尖戳过的夏天</h1>
+      <p>一个关于暗恋与错过的故事</p>
+      <button id="start-btn">点击开始</button>
+    </div>
+  </div>
+
+  <!-- 背景层 -->
+  <div id="bg-layer"></div>
+
+  <!-- 动态特效层 -->
+  <div id="effect-layer"></div>
+
+  <!-- 👇 新增：心电感应全屏层 -->
+  <div id="sensor-layer" class="hidden">
+    <div class="sensor-hint">滑动鼠标 / 指尖，触碰那些未说出口的心事……</div>
+  </div>
+
+  <!-- 顶部按钮组 -->
+  <div id="top-controls">
+    <!-- 把原来的相册换成了心电感应按钮 -->
+    <button id="sensor-btn" title="心电感应">📡</button>
+    <button id="music-toggle" title="开关音乐">🔊</button>
+  </div>
+
+  <!-- 游戏主舞台 -->
+  <div id="game">
+    <div id="hud">
+      <span class="label">好感度</span>
+      <span id="affection-display">0</span>
+    </div>
+    
+    <!-- 屏幕右上角的“日记/内心OS”悄悄话 -->
+    <div id="inner-whisper" class="hidden"></div>
+
+    <div id="insert-img-box"></div>
+    <div id="dialogue-box">
+      <p id="dialogue-text"></p>
+    </div>
+    <div id="choices"></div>
+    
+    <!-- 图鉴收集徽章（彩蛋） -->
+    <div id="collection-badge" title="点击查看回忆">🎒</div>
+  </div>
+
+  <!-- 屏幕中央的静候提示 -->
+  <div id="wait-toast" class="hidden">你要静候，再静候……</div>
+
+  <!-- 终极回忆轮播弹窗 -->
+  <div id="memory-modal" class="hidden">
+    <div class="memory-content">
+      <div class="polaroid-frame">
+        <img id="memory-img" src="" alt="回忆">
+        <div class="polaroid-caption">致那个夏天</div>
+      </div>
+      <div class="memory-controls">
+        <button id="prev-photo">← 上一张</button>
+        <button id="close-memory">关闭回忆</button>
+        <button id="next-photo">下一张 →</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>
